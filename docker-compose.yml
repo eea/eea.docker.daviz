@@ -1,0 +1,6 @@
+plone:
+  image: eeacms/plone
+  ports:
+  - "80:80"
+  volumes:
+  - buildout.cfg:/opt/zope/buildout.cfg
