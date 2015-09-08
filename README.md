@@ -88,7 +88,7 @@ First of all, issue the following command (without the “$”):
 
 **$** `git clone https://github.com/eea/eea.docker.daviz.git`
 
-This will create a folder named “eea.docker.daviz” which contains the necessary files to build and run the Plone-Daviz container (e.g. “docker-compose.yml”, “buildout.cfg”). This folder will be your _repository directory_ from which you launch specific Docker commands. To navigate inside this folder, run this:
+This will create a folder named “eea.docker.daviz” which contains the necessary files to build and run the Plone-Daviz container (e.g. “docker-compose.yml”). This folder will be your _repository directory_ from which you launch specific Docker commands. To navigate inside this folder, run this:
 
 **$** `cd eea.docker.daviz/`
 
@@ -121,21 +121,9 @@ _Note_: you are able to issue the `docker-compose up` command multiple times, bu
 
 #### <a name="C2"></a> C.2 Using the **`docker`** command (Windows) ####
 
-First, you need to identify the **full path** of your repository directory, that is the complete sequence of folders from the root directory (/) up to your repository directory (for example, the format of a full path could look like this: “/home/user/.../repository_directory”). While located in your repository directory, you can easily find the full path just by issuing the following command:
-
-**$** `pwd`
-
 Using the Docker Toolbox terminal, while located in your repository directory, issue the following command (without the “$”):
 
-**$** `docker run -p 80:80 -v REPOSITORY_DIRECTORY/buildout.cfg:/opt/zope/buildout.cfg --name plone_daviz_container eeacms/plone` ,  
-where REPOSITORY\_DIRECTORY is the full path of your repository directory.
-
-If the command fails and a “invalid value ... for flag -v”-alike error message is raised, re-issue the command after adding an additional slash “/” character next to the existing ones in the paths after the “-v” flag. For example, if your initial command was similar to this one:
-
-**$** `docker run -p 80:80 -v /home/user/.../repository_directory/buildout.cfg:/opt/zope/buildout.cfg --name plone_daviz_container eeacms/plone`  
-then change it like this:  
-**$** `docker run -p 80:80 -v //home//user//...//repository_directory//buildout.cfg://opt//zope//buildout.cfg --name plone_daviz_container eeacms/plone`  
-(note that the “`/`” from “`eeacms/plone`” should not be doubled)
+**$** `docker run -p 80:80 --name plone_daviz_container eeacms/daviz`
 
 The command will both _create_ and _start_ a Docker container named “plone\_daviz\_container” which has the Plone-Daviz instance in it. The command runs for a while and does several things in order to set up the container. When it is finished, the message “Ready to handle requests” will apear on the terminal screen, indicating that the container has been created and is currently started (meaning that it is in the “started” state). After issuing this command, you are not able to issue further commands, since the terminal prompt is not available to you. To make it available, you can press “CTRL-c”, but by doing so, you might stop the “plone\_daviz\_container” container, thus bringing it in the “stopped” state. The container will not be removed, but only stopped.
 
