@@ -1,6 +1,4 @@
-plone:
-  image: eeacms/plone
+daviz:
+  image: eeacms/daviz
   ports:
   - "80:80"
-  volumes:
-  - buildout.cfg:/opt/zope/buildout.cfg
