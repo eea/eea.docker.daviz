@@ -1,4 +1,4 @@
-FROM eeacms/plone:4.3.6
+FROM eeacms/plone
 
 ENV CONFIG buildout.cfg
 

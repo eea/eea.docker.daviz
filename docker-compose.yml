@@ -1,4 +1,4 @@
 daviz:
-  image: eeacms/daviz:9.7
+  image: eeacms/daviz
   ports:
   - "80:80"
