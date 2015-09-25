@@ -2,19 +2,16 @@
 
 This document explains how to install and run a Plone instance (with the _EEA Daviz_ add-on installed) from a Docker container.
 
-### A. About containers and Docker ###
 
-More information about Docker can be found here: _[What is Docker](https://www.docker.com/whatisdocker "What is Docker")._
-
-### B. Installing Docker ###
+### Installing Docker ###
 
 In order to build and run a container, you first need to install Docker. The installation steps to be taken depend on the operating system of your computer, as follows:
 
-####  B.1 Linux ####
+#### Linux ####
 
 The way to install Docker varies depending on the Linux distribution on your computer. You can find specific installation instructions for your distribution here: _[Docker Installation](https://docs.docker.com/installation/ "Docker Installation")_.
 
-####  B.2 Windows ####
+#### Windows ####
 
 Because Docker relies on Linux-specific features, you can’t install it and run it natively in Windows. One approach is to install the _[Docker Toolbox](https://www.docker.com/toolbox "Docker Toolbox")_ application which sets up a specific Docker environment on your computer. 
 
@@ -23,7 +20,7 @@ The terminal does several things to set up Docker Toolbox for you. When it is do
 
 More information about installing Docker and working with containers can be found here: _[Get Started with Docker for Windows](http://docs.docker.com/windows/started/ "Get Started with Docker for Windows")_.
 
-#### B.3 Mac OS X ####
+#### Mac OS X ####
 
 Because Docker relies on Linux-specific features, you can’t install it and run it natively in OS X. One approach is to install the _[Docker Toolbox](https://www.docker.com/toolbox "Docker Toolbox")_ application which sets up a specific Docker environment on your computer.
 
@@ -31,7 +28,7 @@ Launch a Docker Toolbox _terminal_ by clicking the “Docker Quickstart Terminal
 
 More information about installing Docker and working with containers can be found here: _[Get Started with Docker for Mac OS X](http://docs.docker.com/mac/started/ "Get Started with Docker for Mac OS X")_.
 
-### C. Building and running the Plone-Daviz container ###
+### Building and running the Plone-Daviz container ###
 
 There are two ways of building and running a Docker container using the terminal:  
 - by issuing the `docker` command and manually specifying configuration parameters of the container at the terminal prompt (parameters such as the name of the container, ports to be used for accessing the container etc.);  
@@ -74,7 +71,7 @@ You are able to access the Plone-Daviz instance from your web browser only if th
 
 _Note_: you are able to issue the `docker-compose up` command multiple times, but by doing so, be aware that the Plone-Daviz container will not only be started, but also be re-created. This means that any changes previously performed to the Plone-Daviz instance (via the web browser) will be _lost_.
 
-#### C.2 Using the **`docker`** command (Windows) ####
+#### Using the **`docker`** command (Windows) ####
 
 Using the Docker Toolbox terminal, while located in your repository directory, issue the following command (without the “$”):
 
@@ -101,11 +98,11 @@ You are able to access the Plone-Daviz instance from your web browser only if th
 
 ### D. Accessing the Plone-Daviz instance from your web browser ###
 
-#### D.1 Linux ####
+#### Linux ####
 
 As long as the Plone-Daviz container is in the “started” state, you are able to access the Plone instance from the web browser. To do that, enter “localhost” or “127.0.0.1” in the address bar of the browser. Alternatively, you can type "http://localhost:80" or "http://127.0.0.1:80". After pressing Enter, the Plone start page should be displayed. Again, note that this works as long as the container is _started_.
 
-#### D.2 Windows and OS X ####
+#### Windows and OS X ####
 
 In order to access the Plone-Daviz instance using the web browser, you first need to identify the IP address of the Docker environment on your computer. Issue the following command to accomplish this:
 
@@ -114,7 +111,7 @@ In order to access the Plone-Daviz instance using the web browser, you first nee
 This should display an address which has the following format: “protocol://**ip\_address**:port” (for example “tcp://192.168.99.100:2376”). Open a web browser and enter the IP address (only **ip\_address**) in the address bar of the browser. Alternatively, you can type "http://**ip\_address**:80". After pressing Enter, the Plone start page should be displayed on your browser. Note that this works as long as the Plone-Daviz container (named “plone\_daviz\_container”) is in a running state.
 Note: in Windows, if you are using the Internet Explorer browser and after entering the IP address in the address bar the Plone start page does not show, you might try using another web browser (e.g. Google Chrome).
 
-### E. Creating the Plone site ###
+### Creating the Plone site ###
 
 Once you have the Plone start page displayed on your browser, click the “Create a new Plone site” button. You are prompted to authenticate in order to proceed further. Type _admin_ for both User Name and Password.
 
