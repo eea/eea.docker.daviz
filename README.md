@@ -44,7 +44,7 @@ This will create a folder named “eea.docker.daviz” which contains the necess
 
 **$** `cd eea.docker.daviz/`
 
-#### C.1 Using the **`docker-compose`** command (Linux and Mac OS X) ####
+#### Using the **`docker-compose`** command (Linux and Mac OS X) ####
 
 Using the terminal (for OS X, the Docker Toolbox terminal), navigate to your repository directory and issue the following command (without the “$”):
 
@@ -96,7 +96,7 @@ This command will bring the container into the “started” state; it will not 
 
 You are able to access the Plone-Daviz instance from your web browser only if the Plone-Daviz container is in the “started” state.
 
-### D. Accessing the Plone-Daviz instance from your web browser ###
+### Accessing the Plone-Daviz instance from your web browser ###
 
 #### Linux ####
 
