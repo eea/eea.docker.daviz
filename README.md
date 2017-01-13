@@ -121,5 +121,5 @@ Next, you are presented with a page in which you can set up several options for 
 - the main Language of the site;  
 - the Add-ons you want to activate for you site. Here, make sure that you check the box next to “**EEA Daviz**”.
 
-Once you click the “Create Plone Site” button, you are presented with the default page of your site. Now you can perform changes and start using the EEA Daviz feature. To learn how to use it, navigate here: [EEA Daviz](http://eea.github.io/docs/eea.daviz/index.html "EEA Daviz").
+Once you click the “Create Plone Site” button, you are presented with the default page of your site. Now you can perform changes and start using the EEA Daviz feature. To learn how to use it, navigate here: [EEA Daviz](http://eea.github.io/docs/IT-systems/eea.daviz/ "EEA Daviz").
 
