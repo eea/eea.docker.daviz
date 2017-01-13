@@ -1,9 +1,11 @@
-FROM eeacms/plone:4.x
-MAINTAINER "Alin Voinea" <alin.voinea@eaudeweb.ro>
-
-COPY src/daviz.cfg  /opt/zope/daviz.cfg
-COPY src/base.cfg   /opt/zope/base.cfg
+FROM plone:4
+MAINTAINER "European Environment Agency (EEA): IDM2 A-Team" <eea-edw-a-team-alerts@googlegroups.com>
 
 USER root
-RUN ./install.sh
-USER zope-www
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends  build-essential \
+ && rm -rf /var/lib/apt/lists/*
+USER plone
+
+COPY site.cfg /plone/instance/
+RUN bin/buildout -c site.cfg
