@@ -75,7 +75,7 @@ _Note_: you are able to issue the `docker-compose up` command multiple times, bu
 
 Using the Docker Toolbox terminal, while located in your repository directory, issue the following command (without the “$”):
 
-**$** `docker run -p 80:80 --name plone_daviz_container eeacms/daviz`
+**$** `docker run -p 80:8080 --name plone_daviz_container eeacms/daviz`
 
 The command will both _create_ and _start_ a Docker container named “plone\_daviz\_container” which has the Plone-Daviz instance in it. The command runs for a while and does several things in order to set up the container. When it is finished, the message “Ready to handle requests” will apear on the terminal screen, indicating that the container has been created and is currently started (meaning that it is in the “started” state). After issuing this command, you are not able to issue further commands, since the terminal prompt is not available to you. To make it available, you can press “CTRL-c”, but by doing so, you might stop the “plone\_daviz\_container” container, thus bringing it in the “stopped” state. The container will not be removed, but only stopped.
 
